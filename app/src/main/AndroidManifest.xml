@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mygame.music_alpha">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_my"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_my_round"
+        android:supportsRtl="true"
+        android:name="com.mygame.music_alpha.ApplicationClass"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.Music_Alpha">
+
+        <activity android:name="com.mygame.music_alpha.MusicActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mygame.music_alpha.Player"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.mygame.music_alpha.ArtistAlbumDetails"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.mygame.music_alpha.Queue"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.mygame.music_alpha.GarbageDetails"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.mygame.music_alpha.PlaylistDetails"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.mygame.music_alpha.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/files" />
+        </provider>
+        <service android:name="com.mygame.music_alpha.MusicService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </service>
+        <receiver android:name="com.mygame.music_alpha.NotificationReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                <action android:name="actionprevious" />
+                <action android:name="actionnext" />
+                <action android:name="actionplay" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.media.session.MediaButtonReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

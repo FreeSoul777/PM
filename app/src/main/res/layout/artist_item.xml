@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_and_gray"
+    android:layout_margin="2dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:id="@+id/artist_item">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/red"
+        android:layout_below="@+id/album_image"
+        android:layout_toEndOf="@+id/album_image"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/album_image"
+        android:src="@drawable/cover_art_2"
+        android:padding="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:id="@+id/album_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Name"
+        android:layout_toEndOf="@+id/album_image"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/menuMore"
+        android:textColor="@color/white"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:id="@+id/menuMore"
+        android:src="@drawable/ic_more"
+        android:padding="12dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"/>
+</RelativeLayout>

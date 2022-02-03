@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Музыка</string>
+
+    <string name="sorting">Сортировка</string>
+    <string name="sort">Сортировать по:</string>
+    <string name="song">Песням</string>
+    <string name="album">Альбому</string>
+    <string name="artist">Артисту</string>
+    <string name="date">Дате добавления</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">Ок</string>
+    <string name="play_next">Играть далее</string>
+    <string name="add_to_queue">Добавить в очередь</string>
+    <string name="add_to_playlist">Добавить в плейлист</string>
+    <string name="delete">Удалить</string>
+    <string name="to_share">Поделиться</string>
+    <string name="queue">Очередь</string>
+    <string name="delete_forever">Удалить навсегда</string>
+    <string name="selected">Выбранно: </string>
+    <string name="share">Поделиться</string>
+    <string name="add">Добавить</string>
+    <string name="title_dialog_add">Введите новое имя плейлиста</string>
+    <string name="clear_playlist">Очистить плейлист</string>
+    <string name="the_entry_is_empty">Запись пуста!</string>
+    <string name="NamePlayExists">Такой плейлист уже существует!</string>
+    <string name="recorded">Записалось: </string>
+    <string name="search">Поиск</string>
+    <string name="singles"> песен</string>
+    <string name="isEmptyPL">Плейлист пуст.</string>
+    <string name="need_Permissions">Нужны Разрешения</string>
+    <string name="permission_1">Это разрешение требуется для чтения музыки с Вашего устройства.
+     Пожалуйста, предоставьте разрешение для корректной работы приложения. </string>
+    <string name="permission_2">Это разрешение требуется для работы эквалайзера. Вы всегда можете
+     включить/выключить это разрешение. </string>
+    <string name="goto_settings">Перейти в настройки</string>
+    <string name="permission">
+        Пожалуйста, предоставьте разрешения для нормальной работы приложения.
+        - Разрешение чтения из хранилища нужно для поиска музыка.
+        - Разрешение для микрофона нужно для работы эквалайзера. </string>
+</resources>

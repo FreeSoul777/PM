@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/music_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_dark"
+        android:layout_alignParentTop="true"
+        app:tabIndicatorFullWidth="true"
+        app:tabTextColor="@color/white"
+        app:tabIndicatorHeight="50dp"
+        app:tabIndicatorColor="#CEFF5858"
+        app:tabGravity="fill"
+        app:tabIndicator="@drawable/tab_indicator"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/music_view_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/music_tab_layout"
+        android:layout_above="@id/bottom_mini_player"/>
+
+    <FrameLayout
+        android:id="@+id/bottom_mini_player"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+
+</RelativeLayout>
